@@ -19,27 +19,34 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 button.addEventListener("click", checking);
 
 function checking() {
-  checkSize();
-  checkBlank();
+  let error = checkSize();
+  error += checkBlank();
+  if (error) {
+    alert(error);
+  }
 }
 function checkSize() {
+  let error = "";
   if (title.value.trim().length < 3) {
-    alert("Votre titre doit faire plus de 2 caractères");
+    error += "Votre titre doit faire plus de 2 caractères\n";
   }
   if (title.value.trim().length > 50) {
-    alert("Votre titre doit faire moins de 50 caractères");
+    error += "Votre titre doit faire moins de 50 caractères\n";
   }
   if (body.value.trim().length < 1) {
-    alert("Votre commentaire doit faire plus de 1 caractère");
+    error += "Votre commentaire doit faire plus de 1 caractère\n";
   }
   if (body.value.trim().length > 250) {
-    alert("Votre commentaire doit faire moins de 250 caractères");
+    error += "Votre commentaire doit faire moins de 250 caractères\n";
   }
+  return error;
 }
 function checkBlank() {
-  if (title.value.trim() === "" || body.value.trim() === "") {
-    alert("veuillez remplir tous les champs");
+  let error = "";
+  if (!title.value || !body.value) {
+    error += "veuillez remplir tous les champs";
   } else {
-    alert(`Titre : ${title.value}\nCommentaire:${body.value}`);
+    error += `Titre : ${title.value}\nCommentaire:${body.value}`;
   }
+  return error;
 }
