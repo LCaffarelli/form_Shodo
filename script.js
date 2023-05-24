@@ -19,12 +19,11 @@ fetch("https://jsonplaceholder.typicode.com/posts", {
 button.addEventListener("click", checking);
 
 function checking() {
-  checkSize;
-  checkBlank;
+  checkSize();
+  checkBlank();
 }
-
 function checkSize() {
-  if (title.value.trim().length < 2) {
+  if (title.value.trim().length < 3) {
     alert("Votre titre doit faire plus de 2 caractères");
   }
   if (title.value.trim().length > 50) {
@@ -41,6 +40,6 @@ function checkBlank() {
   if (title.value.trim() === "" || body.value.trim() === "") {
     alert("veuillez remplir tous les champs");
   } else {
-    alert(`Titre : ${title.value}\nCommentaire : ${body.value}`);
+    alert(`Titre : ${title.value}\nCommentaire:${body.value}`);
   }
 }
