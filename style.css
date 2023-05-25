@@ -1,0 +1,25 @@
+.body {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    margin: 10em;
+}
+
+.card {
+    width: 25em;
+    height: 30em;
+    box-shadow: 0px 0px 151px 25px rgba(255, 255, 255, 0.45);
+    border-radius: 1em;
+
+}
+
+.cardName {
+    color: #ee1b48;
+    text-align: center;
+}
+
+.form {}
+
+.formText {
+    color: white;
+}

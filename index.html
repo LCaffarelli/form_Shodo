@@ -4,21 +4,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire Shodo</title>
-    
+<script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <script src="script.js" defer></script>
+<body class="body">
+    
+<div class="card">
+    <h1 class="cardName">Formulaire Shodo</h1>
 
-    <h1>Test</h1>
+    <form id ="form" onsubmit="handleForm(event)">
+        <label class="formText">Titre : </label><input type="text" id="title" minlength="2" required>
+        <label class="formText">Commentaire : </label><textarea id="body" cols="30" rows="10" required></textarea>
 
-    <form id ="form">
-        <label>Titre : </label><input type="text" id="title"  >
-        <label>Body : </label><input type="textarea" id="body" >
-
-    <button type="submit" id="saveButton">Enregistrer</button>
+    <input type="submit" value="Enregistrer">
     <span id="error"></span>
     </form>
+
+</div>
+
     
 </body>
 </html>
