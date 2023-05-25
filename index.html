@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire Shodo</title>
-<script src="script.js" defer></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="body">
@@ -12,12 +12,17 @@
 <div class="card">
     <h1 class="cardName">Formulaire Shodo</h1>
 
-    <form id ="form" onsubmit="handleForm(event)">
-        <label class="formText">Titre : </label><input type="text" id="title" minlength="2" required>
-        <label class="formText">Commentaire : </label><textarea id="body" cols="30" rows="10" required></textarea>
+    <form class= "form" id ="form" onsubmit="handleForm(event)">
+        <div class="input">
+            <label class="formText">Titre : </label>
+            <input type="text" id="title" minlength="2" maxlength="50" required>
+        </div>
+        <div class="input">
+            <label class="formText">Commentaire : </label>
+            <textarea id="body" cols="20" rows="6" maxlength="250" minlength="2" required></textarea>
+        </div>
 
-    <input type="submit" value="Enregistrer">
-    <span id="error"></span>
+        <input class ="button" type="submit" value="Enregistrer">
     </form>
 
 </div>
