@@ -16,6 +16,6 @@ fetch(urlJsonPlaceholder, {
   .then((response) => response.json())
   .then((json) => console.log(json));
 
-function handleForm(e) {
+function handleForm() {
   alert(`Titre : ${title.value}\nCommentaire : ${body.value}`);
 }
