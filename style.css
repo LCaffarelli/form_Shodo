@@ -13,6 +13,8 @@
 .cardName {
     color: #ee1b48;
     text-align: center;
+    margin-bottom: 0rem;
+    padding-top: 2rem;
 }
 
 .form {
@@ -23,6 +25,7 @@
 
 .formText {
     color: white;
+    font-size: 1.2rem;
 }
 
 .input {
@@ -31,7 +34,7 @@
     margin: 1rem;
 }
 
-
+/* TODO xhanger en rem font-size, height,padding,top */
 .button {
     background-color: #ee1b48;
     border-radius: 8px;
@@ -58,6 +61,7 @@
     -webkit-user-select: none;
     touch-action: manipulation;
     margin: auto;
+    top: 2px;
 }
 
 .button:hover,
